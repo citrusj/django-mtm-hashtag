@@ -1,0 +1,6 @@
+<h1>해시태그 목록</h1>
+{% for tag in tags %}
+<a href="{% url 'tag_detail' pk=tag.pk %}"># {{ tag.name }}</a>
+{{tag.content_set.count}}
+<br><br>
+{% endfor %}

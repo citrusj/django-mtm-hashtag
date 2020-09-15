@@ -25,4 +25,8 @@ urlpatterns = [
     path('edit/<int:pk>', board.views.edit, name="edit"),
     path('delete/<int:pk>', board.views.delete, name="delete"),
     path('detail/<int:pk>/comment/<int:comment_pk>/delete/', board.views.delete_comment, name="delete_comment"),
+    path('tagadd/<int:pk>', board.views.tag_add, name="tag_add"),
+    path('tag', board.views.tag_home, name="tag_home"),
+    path('hashtag/<int:pk>', board.views.tag_detail, name="tag_detail"),
+    path('detail/<int:pk>/tag/<int:tag_pk>/delete', board.views.tag_delete, name="tag_delete"),
 ]
